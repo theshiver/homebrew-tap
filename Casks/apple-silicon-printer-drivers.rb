@@ -1,6 +1,6 @@
 cask "apple-silicon-printer-drivers" do
-  version "2.0.0"
-  sha256 "339a8213e8fcee5fd8b8dcb9a25d21da1eadfb1ed2de3b6616e45ec5679fbdfe"
+  version "2.0.1"
+  sha256 "fcd65c8c5a3f5e0ae1fa920517d2a27c9453b5ffb06d2b50cc03fea0613d7955"
 
   url "https://github.com/theshiver/apple-silicon-printer-drivers/releases/download/v#{version}/AppleSilicon-Printer-Drivers-#{version}.pkg"
   name "Apple Silicon Printer Drivers"
