@@ -4,8 +4,8 @@ cask "apple-silicon-printer-drivers" do
 
   url "https://github.com/theshiver/apple-silicon-printer-drivers/releases/download/v#{version}/AppleSilicon-Printer-Drivers-#{version}.pkg"
   name "Apple Silicon Printer Drivers"
-  desc "Native arm64 drivers for 3,800+ Canon, Epson, HP, Brother and Samsung printers"
-  homepage "https://theshiver.github.io/apple-silicon-printer-drivers/"
+  desc "Native arm64 drivers for 3,600+ printers, plus AirPrint for iPhone and iPad"
+  homepage "https://macprinterdrivers.com/"
 
   livecheck do
     url :url
@@ -17,7 +17,12 @@ cask "apple-silicon-printer-drivers" do
 
   pkg "AppleSilicon-Printer-Drivers-#{version}.pkg"
 
-  uninstall pkgutil: "com.github.apple-silicon-printer-drivers",
+  uninstall script:  {
+              executable: "/Library/Printers/Gutenprint/bin/airprint-share",
+              args:       ["set"],
+              sudo:       false,
+            },
+            pkgutil: "com.github.apple-silicon-printer-drivers",
             delete:  [
               "/Library/Printers/Gutenprint",
               "/usr/local/bin/gutenprint-add",
@@ -27,6 +32,6 @@ cask "apple-silicon-printer-drivers" do
     USB printers are set up automatically. If yours was not, or it is on Wi-Fi:
       gutenprint-add --list "<model>"
       sudo gutenprint-add <model-id>
-    Model search: https://theshiver.github.io/apple-silicon-printer-drivers/#search
+    Model search: https://macprinterdrivers.com/#search
   EOS
 end
