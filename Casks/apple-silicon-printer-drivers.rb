@@ -4,7 +4,7 @@ cask "apple-silicon-printer-drivers" do
 
   url "https://github.com/theshiver/apple-silicon-printer-drivers/releases/download/v#{version}/AppleSilicon-Printer-Drivers-#{version}.pkg"
   name "Apple Silicon Printer Drivers"
-  desc "Native arm64 drivers for 3,600+ printers, plus AirPrint for iPhone and iPad"
+  desc "Native arm64 drivers for 3,700+ printers, plus AirPrint for iPhone and iPad"
   homepage "https://macprinterdrivers.com/"
 
   livecheck do
