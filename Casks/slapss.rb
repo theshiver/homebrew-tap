@@ -1,6 +1,6 @@
 cask "slapss" do
-  version "2.3.0"
-  sha256 "7d9a4f118918bb05340b6fa4ffdf75fb26e7b169e6eeab24ab1404f20590b4da"
+  version "2.4.0"
+  sha256 "578653e09942280fef9dfa904fd04beaf2379c1fb2badb8057503da7de57420f"
 
   url "https://github.com/theshiver/slapss-app/releases/download/v#{version}/Slapss-#{version}.zip"
   name "Slapss"
